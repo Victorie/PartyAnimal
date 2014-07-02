@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-static NSString * kReceiverAppID;
+static NSString * kReceiverAppID = @"AE7CB007";
 
 @interface ViewController () {
     UIImage * _btnImage;
