@@ -75,11 +75,57 @@
                     <view key="view" contentMode="scaleToFill" id="vcj-SM-uYB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <searchBar appearanceType="aqua" contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JlR-UD-K5H">
+                                <rect key="frame" x="0.0" y="26" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="wqs-Ai-Ge7" id="bD0-YV-oVT"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="dmN-rP-7dS"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="hFk-NT-9CB" id="ZVq-Ja-jFY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aiv-oI-Kcg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="LhH-kO-3lw">
+                    <connections>
+                        <outlet property="delegate" destination="wqs-Ai-Ge7" id="u08-0R-hDq"/>
+                        <outlet property="searchContentsController" destination="wqs-Ai-Ge7" id="Ahm-Xg-Wd6"/>
+                        <outlet property="searchResultsDataSource" destination="wqs-Ai-Ge7" id="8dt-LJ-TnM"/>
+                        <outlet property="searchResultsDelegate" destination="wqs-Ai-Ge7" id="s2V-xW-CJ4"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="zfm-vI-mTX">
+                    <connections>
+                        <outlet property="delegate" destination="wqs-Ai-Ge7" id="Qnr-ck-7uw"/>
+                        <outlet property="searchContentsController" destination="wqs-Ai-Ge7" id="HF7-2x-4uF"/>
+                        <outlet property="searchResultsDataSource" destination="wqs-Ai-Ge7" id="ZbJ-qA-J4N"/>
+                        <outlet property="searchResultsDelegate" destination="wqs-Ai-Ge7" id="KQz-PJ-qdF"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="MhF-fj-7hn">
+                    <connections>
+                        <outlet property="delegate" destination="wqs-Ai-Ge7" id="dma-VT-QZ6"/>
+                        <outlet property="searchContentsController" destination="wqs-Ai-Ge7" id="uJG-aU-26r"/>
+                        <outlet property="searchResultsDataSource" destination="wqs-Ai-Ge7" id="59A-po-JHI"/>
+                        <outlet property="searchResultsDelegate" destination="wqs-Ai-Ge7" id="kO8-Mc-fra"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="hFk-NT-9CB">
+                    <connections>
+                        <outlet property="delegate" destination="wqs-Ai-Ge7" id="vYj-kg-m2h"/>
+                        <outlet property="searchBar" destination="JlR-UD-K5H" id="PXn-r9-rYi"/>
+                        <outlet property="searchContentsController" destination="wqs-Ai-Ge7" id="Amm-ED-r7v"/>
+                        <outlet property="searchResultsDataSource" destination="wqs-Ai-Ge7" id="r5w-At-T4Q"/>
+                        <outlet property="searchResultsDelegate" destination="wqs-Ai-Ge7" id="hgT-3V-od5"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1021" y="286"/>
         </scene>

@@ -120,6 +120,16 @@ static NSString * kReceiverAppID = @"AE7CB007";
     return self.deviceManager.isConnected;
 }
 
+- (void)connectToDevice {
+    if (self.selectedDevice == nil)
+        return;
+    
+    //NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
+    //self.deviceManager = [GCKDeviceManager alloc] initWithDevice:self.selectedDevice clientPackageName:[info objectForkey:@"CFBundleIdentifier"];
+    //self.deviceManager.delegate = self;
+    //[self.deviceManager connect];
+}
+
 - (IBAction)castVideo:(id)sender {
     NSLog(@"Cast Video");
     
