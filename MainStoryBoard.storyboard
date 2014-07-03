@@ -1,45 +1,87 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A261i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="z6v-CN-bPZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A261i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="XFT-c7-l64">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Title-->
-        <scene sceneID="7Sm-PD-ytU">
+        <!--View Controller - Item 1-->
+        <scene sceneID="zKX-IC-ZYu">
             <objects>
-                <viewController id="z6v-CN-bPZ" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="2dQ-je-rd2" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="KGq-eJ-Qss"/>
-                        <viewControllerLayoutGuide type="bottom" id="AKW-Sp-5l2"/>
+                        <viewControllerLayoutGuide type="top" id="dCG-6O-F4u"/>
+                        <viewControllerLayoutGuide type="bottom" id="8p1-GE-BSe"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="JEl-k6-omj">
+                    <view key="view" contentMode="scaleToFill" id="xKh-AT-jym">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Google Cast Hello Video" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Jq-72-uMu">
-                                <rect key="frame" x="40" y="70" width="259" height="29"/>
+                                <rect key="frame" x="20" y="96" width="259" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbQ-7S-ItZ">
-                                <rect key="frame" x="123" y="218" width="75" height="30"/>
+                                <rect key="frame" x="120" y="268" width="75" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cast Video">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="castVideo:" destination="z6v-CN-bPZ" eventType="touchUpInside" id="6P9-uf-B7S"/>
+                                    <action selector="castVideo:" destination="2dQ-je-rd2" eventType="touchUpInside" id="USv-jO-dRv"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" none="YES" button="YES"/>
+                        </accessibility>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="qTO-3l-F2c"/>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="lhb-mn-Rsx"/>
+                    <navigationItem key="navigationItem" id="Ksf-b1-VHu"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RXE-tX-ZUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NeO-kI-jto" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="90" y="-42"/>
+            <point key="canvasLocation" x="1021" y="-365"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="2LC-G8-vOl">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="XFT-c7-l64" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="paf-H7-8hK">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="2dQ-je-rd2" kind="relationship" relationship="viewControllers" id="wAg-h1-xwb"/>
+                        <segue destination="wqs-Ai-Ge7" kind="relationship" relationship="viewControllers" id="8Qe-U2-XpO"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OQy-Dx-HtT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="487" y="-40"/>
+        </scene>
+        <!--View Controller - Item 2-->
+        <scene sceneID="UVE-jg-6NG">
+            <objects>
+                <viewController id="wqs-Ai-Ge7" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IhD-ge-pie"/>
+                        <viewControllerLayoutGuide type="bottom" id="L2E-zF-lbR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vcj-SM-uYB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="dmN-rP-7dS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aiv-oI-Kcg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1021" y="286"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
