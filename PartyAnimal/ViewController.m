@@ -87,7 +87,6 @@ static NSString * kReceiverAppID = @"AE7CB007";
         sheet.cancelButtonIndex = sheet.numberOfButtons - 1;
     }
     else {
-        /*
         [self updateStatsFromDevice];
         
         NSString *frendlyName = [NSString stringWithFormat:NSLocalizedString(@"Casting to %@", nil), self.selectedDevice.friendlyName];
@@ -107,7 +106,6 @@ static NSString * kReceiverAppID = @"AE7CB007";
         sheet.cancelButtonIndex = (mediaTitle != nil ? 2 : 1);
         
         [sheet showInView:_chromecastButton];
-        */
     }
 }
 
@@ -120,6 +118,22 @@ static NSString * kReceiverAppID = @"AE7CB007";
 
 - (BOOL)isConnected {
     return self.deviceManager.isConnected;
+}
+
+- (IBAction)castVideo:(id)sender {
+    NSLog(@"Cast Video");
+    
+    //Show alert if not connected
+    if (!self.deviceManager || !self.deviceManager.isConnected) {
+        UIAlertView *alert =
+        [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Not Connected", nil)
+                                   message:NSLocalizedString(@"Please connect to Cast device", nil)
+                                  delegate:nil
+                         cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                         otherButtonTitles:nil];
+        [alert show];
+        return;
+    }
 }
 
 #pragma mark - GCKDeviceScannerListener
