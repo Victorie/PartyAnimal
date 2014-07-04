@@ -131,6 +131,7 @@ static NSString * kReceiverAppID = @"AE7CB007";
 }
 
 - (IBAction)castVideo:(id)sender {
+    
     NSLog(@"Cast Video");
     
     //Show alert if not connected
