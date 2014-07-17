@@ -51,9 +51,12 @@ static NSString * kReceiverAppID = @"AE7CB007";
     [_chromecastButton addTarget:self action:@selector(chooseDevice:) forControlEvents:UIControlEventTouchDown];
     _chromecastButton.frame = CGRectMake(0, 0, _btnImage.size.width, _btnImage.size.height);
     [_chromecastButton setImage:nil forState:UIControlStateNormal];
-    _chromecastButton.hidden = YES;
+    _chromecastButton.hidden = NO;
 
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_chromecastButton];
+    //self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_chromecastButton];
+    
+    UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Show" style:UIBarButtonItemStylePlain target:self action:@selector(chooseDevice:)];
+    self.navigationItem.rightBarButtonItem = anotherButton;
     
     // Initialize device scanner
     self.deviceScanner = [[GCKDeviceScanner alloc] init];
@@ -121,13 +124,14 @@ static NSString * kReceiverAppID = @"AE7CB007";
 }
 
 - (void)connectToDevice {
+    
     if (self.selectedDevice == nil)
         return;
     
-    //NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
-    //self.deviceManager = [GCKDeviceManager alloc] initWithDevice:self.selectedDevice clientPackageName:[info objectForkey:@"CFBundleIdentifier"];
-    //self.deviceManager.delegate = self;
-    //[self.deviceManager connect];
+    NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
+    self.deviceManager = [[GCKDeviceManager alloc]  initWithDevice:self.selectedDevice clientPackageName:[info objectForKey:@"CFBundleIdentifier"]];
+    self.deviceManager.delegate = self;
+    [self.deviceManager connect];
 }
 
 - (IBAction)castVideo:(id)sender {
@@ -145,28 +149,36 @@ static NSString * kReceiverAppID = @"AE7CB007";
         [alert show];
         return;
     }
+    
+    // Define Media metadata
+    
 }
 
 #pragma mark - GCKDeviceScannerListener
 - (void)deviceDidComeOnline:(GCKDevice *)device {
     NSLog(@"device found!! %@", device.friendlyName);
-    [self updateButtonStatus];
+    [self updateButtonStates];
 }
 
 - (void)deviceDidGoOffline:(GCKDevice *)device {
     NSLog(@"device disappeared!!!");
-    [self updateButtonStatus];
+    [self updateButtonStates];
 }
 
-- (void)updateButtonStatus {
-    if (self.deviceScanner.devices.count == 0) {
+- (void)updateButtonStates {
+    
+    if (self.deviceScanner.devices.count == 0)
+    {
         _chromecastButton.hidden = YES;
     }
-    else {
+    else
+    {
+        //Show cast button
         [_chromecastButton setImage:_btnImage forState:UIControlStateNormal];
         _chromecastButton.hidden = NO;
         
-        if (self.deviceManager && self.deviceManager.isConnected) {
+        if (self.deviceManager && self.deviceManager.isConnected)
+        {
             //show cast button in enable state
             [_chromecastButton setTintColor:[UIColor blueColor]];
         }
