@@ -53,7 +53,7 @@ static NSString * kReceiverAppID = @"AE7CB007";
     [_chromecastButton setImage:nil forState:UIControlStateNormal];
     _chromecastButton.hidden = NO;
 
-    //self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_chromecastButton];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_chromecastButton];
     
     UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Show" style:UIBarButtonItemStylePlain target:self action:@selector(chooseDevice:)];
     self.navigationItem.rightBarButtonItem = anotherButton;
@@ -133,6 +133,7 @@ static NSString * kReceiverAppID = @"AE7CB007";
     self.deviceManager.delegate = self;
     [self.deviceManager connect];
 }
+
 
 - (IBAction)castVideo:(id)sender {
     

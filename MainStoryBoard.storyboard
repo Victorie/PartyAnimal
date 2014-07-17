@@ -4,46 +4,49 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Item 1-->
-        <scene sceneID="zKX-IC-ZYu">
+        <!--View Controller - Chromecast-->
+        <scene sceneID="t6g-eF-mtq">
             <objects>
-                <viewController id="2dQ-je-rd2" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="3y0-D8-OGq" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="dCG-6O-F4u"/>
-                        <viewControllerLayoutGuide type="bottom" id="8p1-GE-BSe"/>
+                        <viewControllerLayoutGuide type="top" id="Gh4-Nh-n3V"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Sm-OE-pwC"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="xKh-AT-jym">
+                    <view key="view" contentMode="scaleToFill" id="02N-Gv-f47">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Google Cast Hello Video" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Jq-72-uMu">
-                                <rect key="frame" x="20" y="96" width="259" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbQ-7S-ItZ">
-                                <rect key="frame" x="120" y="268" width="75" height="30"/>
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djf-kn-i8l">
+                                <rect key="frame" x="115" y="174" width="75" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cast Video">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="castVideo:" destination="2dQ-je-rd2" eventType="touchUpInside" id="USv-jO-dRv"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <accessibility key="accessibilityConfiguration">
-                            <accessibilityTraits key="traits" none="YES" button="YES"/>
-                        </accessibility>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="lhb-mn-Rsx"/>
-                    <navigationItem key="navigationItem" id="ez0-4V-iGW"/>
+                    <navigationItem key="navigationItem" title="Chromecast" id="pux-OY-yn1"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NeO-kI-jto" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="chS-tj-0pz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1001" y="-455"/>
+            <point key="canvasLocation" x="1472" y="-386"/>
+        </scene>
+        <!--Navigation Controller - Chormecast-->
+        <scene sceneID="jGg-28-jmg">
+            <objects>
+                <navigationController title="Chormecast" definesPresentationContext="YES" id="Rdl-UC-Zal" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Chormecast" image="icon-cast-connected.png" id="rEq-Dk-ak9"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="L19-jH-jli">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3y0-D8-OGq" kind="relationship" relationship="rootViewController" id="2FH-PD-5Mz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hej-cJ-Z3k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1021" y="-386"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="2LC-G8-vOl">
@@ -56,18 +59,18 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="2dQ-je-rd2" kind="relationship" relationship="viewControllers" id="wAg-h1-xwb"/>
-                        <segue destination="wqs-Ai-Ge7" kind="relationship" relationship="viewControllers" id="8Qe-U2-XpO"/>
+                        <segue destination="Rdl-UC-Zal" kind="relationship" relationship="viewControllers" id="X6t-lH-mTj"/>
+                        <segue destination="wqs-Ai-Ge7" kind="relationship" relationship="viewControllers" id="53x-ac-8w7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OQy-Dx-HtT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="487" y="-40"/>
         </scene>
-        <!--View Controller - Item 2-->
+        <!--View Controller - Youtube-->
         <scene sceneID="UVE-jg-6NG">
             <objects>
-                <viewController id="wqs-Ai-Ge7" sceneMemberID="viewController">
+                <viewController title="Youtube" id="wqs-Ai-Ge7" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IhD-ge-pie"/>
                         <viewControllerLayoutGuide type="bottom" id="L2E-zF-lbR"/>
@@ -123,7 +126,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="dmN-rP-7dS"/>
+                    <tabBarItem key="tabBarItem" title="List" image="icon-cast-identified.png" id="dmN-rP-7dS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aiv-oI-Kcg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <searchDisplayController id="LhH-kO-3lw">
@@ -138,6 +141,10 @@
             <point key="canvasLocation" x="1021" y="286"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon-cast-connected.png" width="39" height="34"/>
+        <image name="icon-cast-identified.png" width="39" height="34"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
