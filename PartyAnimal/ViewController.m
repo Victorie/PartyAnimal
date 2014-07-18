@@ -50,13 +50,10 @@ static NSString * kReceiverAppID = @"AE7CB007";
     _chromecastButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [_chromecastButton addTarget:self action:@selector(chooseDevice:) forControlEvents:UIControlEventTouchDown];
     _chromecastButton.frame = CGRectMake(0, 0, _btnImage.size.width, _btnImage.size.height);
-    [_chromecastButton setImage:nil forState:UIControlStateNormal];
-    _chromecastButton.hidden = NO;
+    [_chromecastButton setImage:_btnImage forState:UIControlStateNormal];
+    _chromecastButton.hidden = YES;
 
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_chromecastButton];
-    
-    UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Show" style:UIBarButtonItemStylePlain target:self action:@selector(chooseDevice:)];
-    self.navigationItem.rightBarButtonItem = anotherButton;
     
     // Initialize device scanner
     self.deviceScanner = [[GCKDeviceScanner alloc] init];
