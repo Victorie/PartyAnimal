@@ -51,7 +51,7 @@ static NSString * kReceiverAppID = @"AE7CB007";
     [_chromecastButton addTarget:self action:@selector(chooseDevice:) forControlEvents:UIControlEventTouchDown];
     _chromecastButton.frame = CGRectMake(0, 0, _btnImage.size.width, _btnImage.size.height);
     [_chromecastButton setImage:_btnImage forState:UIControlStateNormal];
-    _chromecastButton.hidden = NO;
+    _chromecastButton.hidden = YES;
 
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_chromecastButton];
     
@@ -85,6 +85,7 @@ static NSString * kReceiverAppID = @"AE7CB007";
         
         [sheet addButtonWithTitle:NSLocalizedString(@"Cancel", nil)];
         sheet.cancelButtonIndex = sheet.numberOfButtons - 1;
+        [sheet showInView:_chromecastButton];
     }
     else {
         [self updateStatsFromDevice];
