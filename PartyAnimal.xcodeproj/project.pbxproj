@@ -22,6 +22,11 @@
 		D95FAF28196456D0009BA0EB /* GoogleCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95FAF27196456D0009BA0EB /* GoogleCast.framework */; };
 		D95FAF2C196457F4009BA0EB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D95FAF2B196457F4009BA0EB /* ViewController.m */; };
 		D96E861C1965396400680875 /* MainStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D96E861B1965396400680875 /* MainStoryBoard.storyboard */; };
+		D998DB4E199CBEC9005C195C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D998DB4D199CBEC9005C195C /* Security.framework */; };
+		D998DB50199CBED6005C195C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D998DB4F199CBED6005C195C /* SystemConfiguration.framework */; };
+		D998DB52199CC02E005C195C /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = D998DB51199CC02E005C195C /* GTMOAuth2ViewTouch.xib */; };
+		D998DB55199CC058005C195C /* GTLCommon_Sources.m in Sources */ = {isa = PBXBuildFile; fileRef = D998DB53199CC058005C195C /* GTLCommon_Sources.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D998DB56199CC058005C195C /* GTLNetworking_Sources.m in Sources */ = {isa = PBXBuildFile; fileRef = D998DB54199CC058005C195C /* GTLNetworking_Sources.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D9A0D6001971412500ABBE96 /* icon-cast-connected.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A0D5FC1971412500ABBE96 /* icon-cast-connected.png */; };
 		D9A0D6011971412500ABBE96 /* icon-cast-connected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A0D5FD1971412500ABBE96 /* icon-cast-connected@2x.png */; };
 		D9A0D6021971412500ABBE96 /* icon-cast-identified.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A0D5FE1971412500ABBE96 /* icon-cast-identified.png */; };
@@ -59,6 +64,11 @@
 		D95FAF2A196457F4009BA0EB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D95FAF2B196457F4009BA0EB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D96E861B1965396400680875 /* MainStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryBoard.storyboard; sourceTree = "<group>"; };
+		D998DB4D199CBEC9005C195C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D998DB4F199CBED6005C195C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D998DB51199CC02E005C195C /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GTMOAuth2ViewTouch.xib; path = Source/OAuth2/Touch/GTMOAuth2ViewTouch.xib; sourceTree = "<group>"; };
+		D998DB53199CC058005C195C /* GTLCommon_Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLCommon_Sources.m; sourceTree = "<group>"; };
+		D998DB54199CC058005C195C /* GTLNetworking_Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLNetworking_Sources.m; sourceTree = "<group>"; };
 		D9A0D5FC1971412500ABBE96 /* icon-cast-connected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-cast-connected.png"; sourceTree = "<group>"; };
 		D9A0D5FD1971412500ABBE96 /* icon-cast-connected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-cast-connected@2x.png"; sourceTree = "<group>"; };
 		D9A0D5FE1971412500ABBE96 /* icon-cast-identified.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-cast-identified.png"; sourceTree = "<group>"; };
@@ -70,6 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D998DB50199CBED6005C195C /* SystemConfiguration.framework in Frameworks */,
+				D998DB4E199CBEC9005C195C /* Security.framework in Frameworks */,
 				D95FAF28196456D0009BA0EB /* GoogleCast.framework in Frameworks */,
 				D95FAEFB1963FFDF009BA0EB /* CoreGraphics.framework in Frameworks */,
 				D95FAEFD1963FFDF009BA0EB /* UIKit.framework in Frameworks */,
@@ -94,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				D96E861B1965396400680875 /* MainStoryBoard.storyboard */,
+				D998DB51199CC02E005C195C /* GTMOAuth2ViewTouch.xib */,
 				D95FAEFE1963FFDF009BA0EB /* PartyAnimal */,
 				D95FAF171963FFE0009BA0EB /* PartyAnimalTests */,
 				D95FAEF71963FFDF009BA0EB /* Frameworks */,
@@ -113,6 +126,8 @@
 		D95FAEF71963FFDF009BA0EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D998DB4F199CBED6005C195C /* SystemConfiguration.framework */,
+				D998DB4D199CBEC9005C195C /* Security.framework */,
 				D95FAF27196456D0009BA0EB /* GoogleCast.framework */,
 				D95FAEF81963FFDF009BA0EB /* Foundation.framework */,
 				D95FAEFA1963FFDF009BA0EB /* CoreGraphics.framework */,
@@ -125,6 +140,8 @@
 		D95FAEFE1963FFDF009BA0EB /* PartyAnimal */ = {
 			isa = PBXGroup;
 			children = (
+				D998DB53199CC058005C195C /* GTLCommon_Sources.m */,
+				D998DB54199CC058005C195C /* GTLNetworking_Sources.m */,
 				D95FAF071963FFDF009BA0EB /* AppDelegate.h */,
 				D95FAF081963FFDF009BA0EB /* AppDelegate.m */,
 				D95FAF2A196457F4009BA0EB /* ViewController.h */,
@@ -246,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D998DB52199CC02E005C195C /* GTMOAuth2ViewTouch.xib in Resources */,
 				D96E861C1965396400680875 /* MainStoryBoard.storyboard in Resources */,
 				D95FAF031963FFDF009BA0EB /* InfoPlist.strings in Resources */,
 				D9A0D6021971412500ABBE96 /* icon-cast-identified.png in Resources */,
@@ -272,8 +290,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D95FAF2C196457F4009BA0EB /* ViewController.m in Sources */,
+				D998DB55199CC058005C195C /* GTLCommon_Sources.m in Sources */,
 				D95FAF091963FFDF009BA0EB /* AppDelegate.m in Sources */,
 				D95FAF051963FFDF009BA0EB /* main.m in Sources */,
+				D998DB56199CC058005C195C /* GTLNetworking_Sources.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,8 +418,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PartyAnimal/PartyAnimal-Prefix.pch";
 				INFOPLIST_FILE = "PartyAnimal/PartyAnimal-Info.plist";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/Users/msc0953/Documents/workspace/PartyAnimal/Source/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -417,8 +441,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PartyAnimal/PartyAnimal-Prefix.pch";
 				INFOPLIST_FILE = "PartyAnimal/PartyAnimal-Info.plist";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/Users/msc0953/Documents/workspace/PartyAnimal/Source/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

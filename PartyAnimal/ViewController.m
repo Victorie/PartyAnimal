@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "GTMOAuth2ViewControllerTouch.h"
 
 static NSString * kReceiverAppID = @"AE7CB007";
 
@@ -22,6 +23,7 @@ static NSString * kReceiverAppID = @"AE7CB007";
 @property(nonatomic, strong) UIButton *chromecastButton;
 @property(nonatomic, strong) GCKDeviceManager *deviceManager;
 @property(nonatomic, readonly) GCKMediaInformation *mediaInformation;
+@property (nonatomic, readonly) GTLServiceYouTube *youTubeService;
 
 @end
 

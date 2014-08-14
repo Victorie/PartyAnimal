@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <GoogleCast/GoogleCast.h>
+#import "GTLYouTube.h"
 
 @interface ViewController : UIViewController<GCKDeviceScannerListener,
                                              GCKDeviceManagerDelegate,
