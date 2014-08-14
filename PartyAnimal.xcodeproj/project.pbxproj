@@ -27,6 +27,7 @@
 		D998DB52199CC02E005C195C /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = D998DB51199CC02E005C195C /* GTMOAuth2ViewTouch.xib */; };
 		D998DB55199CC058005C195C /* GTLCommon_Sources.m in Sources */ = {isa = PBXBuildFile; fileRef = D998DB53199CC058005C195C /* GTLCommon_Sources.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D998DB56199CC058005C195C /* GTLNetworking_Sources.m in Sources */ = {isa = PBXBuildFile; fileRef = D998DB54199CC058005C195C /* GTLNetworking_Sources.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D998DB5A199CC82F005C195C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D998DB59199CC82F005C195C /* SearchViewController.m */; };
 		D9A0D6001971412500ABBE96 /* icon-cast-connected.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A0D5FC1971412500ABBE96 /* icon-cast-connected.png */; };
 		D9A0D6011971412500ABBE96 /* icon-cast-connected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A0D5FD1971412500ABBE96 /* icon-cast-connected@2x.png */; };
 		D9A0D6021971412500ABBE96 /* icon-cast-identified.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A0D5FE1971412500ABBE96 /* icon-cast-identified.png */; };
@@ -67,8 +68,10 @@
 		D998DB4D199CBEC9005C195C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D998DB4F199CBED6005C195C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D998DB51199CC02E005C195C /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GTMOAuth2ViewTouch.xib; path = Source/OAuth2/Touch/GTMOAuth2ViewTouch.xib; sourceTree = "<group>"; };
-		D998DB53199CC058005C195C /* GTLCommon_Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLCommon_Sources.m; sourceTree = "<group>"; };
-		D998DB54199CC058005C195C /* GTLNetworking_Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTLNetworking_Sources.m; sourceTree = "<group>"; };
+		D998DB53199CC058005C195C /* GTLCommon_Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLCommon_Sources.m; path = PartyAnimal/GTLCommon_Sources.m; sourceTree = "<group>"; };
+		D998DB54199CC058005C195C /* GTLNetworking_Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLNetworking_Sources.m; path = PartyAnimal/GTLNetworking_Sources.m; sourceTree = "<group>"; };
+		D998DB58199CC82F005C195C /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		D998DB59199CC82F005C195C /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		D9A0D5FC1971412500ABBE96 /* icon-cast-connected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-cast-connected.png"; sourceTree = "<group>"; };
 		D9A0D5FD1971412500ABBE96 /* icon-cast-connected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-cast-connected@2x.png"; sourceTree = "<group>"; };
 		D9A0D5FE1971412500ABBE96 /* icon-cast-identified.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-cast-identified.png"; sourceTree = "<group>"; };
@@ -107,6 +110,8 @@
 			children = (
 				D96E861B1965396400680875 /* MainStoryBoard.storyboard */,
 				D998DB51199CC02E005C195C /* GTMOAuth2ViewTouch.xib */,
+				D998DB53199CC058005C195C /* GTLCommon_Sources.m */,
+				D998DB54199CC058005C195C /* GTLNetworking_Sources.m */,
 				D95FAEFE1963FFDF009BA0EB /* PartyAnimal */,
 				D95FAF171963FFE0009BA0EB /* PartyAnimalTests */,
 				D95FAEF71963FFDF009BA0EB /* Frameworks */,
@@ -140,12 +145,12 @@
 		D95FAEFE1963FFDF009BA0EB /* PartyAnimal */ = {
 			isa = PBXGroup;
 			children = (
-				D998DB53199CC058005C195C /* GTLCommon_Sources.m */,
-				D998DB54199CC058005C195C /* GTLNetworking_Sources.m */,
 				D95FAF071963FFDF009BA0EB /* AppDelegate.h */,
 				D95FAF081963FFDF009BA0EB /* AppDelegate.m */,
 				D95FAF2A196457F4009BA0EB /* ViewController.h */,
 				D95FAF2B196457F4009BA0EB /* ViewController.m */,
+				D998DB58199CC82F005C195C /* SearchViewController.h */,
+				D998DB59199CC82F005C195C /* SearchViewController.m */,
 				D95FAF0A1963FFDF009BA0EB /* Images.xcassets */,
 				D95FAEFF1963FFDF009BA0EB /* Supporting Files */,
 			);
@@ -293,6 +298,7 @@
 				D998DB55199CC058005C195C /* GTLCommon_Sources.m in Sources */,
 				D95FAF091963FFDF009BA0EB /* AppDelegate.m in Sources */,
 				D95FAF051963FFDF009BA0EB /* main.m in Sources */,
+				D998DB5A199CC82F005C195C /* SearchViewController.m in Sources */,
 				D998DB56199CC058005C195C /* GTLNetworking_Sources.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
