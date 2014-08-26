@@ -10,4 +10,12 @@
 
 @interface SearchViewController : UIViewController
 
+/*
+@property (weak, nonatomic) IBOutlet UIImageView *recipeImageView;
+@property (weak, nonatomic) IBOutlet UILabel     *prepTimeLabel;
+@property (weak, nonatomic) IBOutlet UITextView  *ingredientsTextView;
+
+@property (nonatomic, strong) Recipe *recipe;
+*/
+ 
 @end
