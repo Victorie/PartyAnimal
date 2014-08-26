@@ -111,6 +111,7 @@
     }
 }
 
+/*
 - (NSArray *)_itemsForTableView:(UITableView *)tableView
 {
     if (tableView == self.tableView)
@@ -126,6 +127,7 @@
         return nil;
     }
 }
+*/
 
 /*
 #pragma mark - Navigation
