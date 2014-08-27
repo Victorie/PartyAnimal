@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D85CB84E19AC81D400FCA696 /* YoutubeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85CB84D19AC81D400FCA696 /* YoutubeTableViewController.m */; };
+		D85CB85219AC8A7C00FCA696 /* YoutubeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D85CB85119AC8A7C00FCA696 /* YoutubeCell.m */; };
 		D95FAEF91963FFDF009BA0EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95FAEF81963FFDF009BA0EB /* Foundation.framework */; };
 		D95FAEFB1963FFDF009BA0EB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95FAEFA1963FFDF009BA0EB /* CoreGraphics.framework */; };
 		D95FAEFD1963FFDF009BA0EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95FAEFC1963FFDF009BA0EB /* UIKit.framework */; };
@@ -23,13 +25,11 @@
 		D95FAF2C196457F4009BA0EB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D95FAF2B196457F4009BA0EB /* ViewController.m */; };
 		D96E861C1965396400680875 /* MainStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D96E861B1965396400680875 /* MainStoryBoard.storyboard */; };
 		D97DBA7C199E03DB00AED8B5 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = D97DBA7B199E03DB00AED8B5 /* Recipe.m */; };
-		D97DBA7F199E047A00AED8B5 /* VedioTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97DBA7E199E047A00AED8B5 /* VedioTableViewController.m */; };
 		D998DB4E199CBEC9005C195C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D998DB4D199CBEC9005C195C /* Security.framework */; };
 		D998DB50199CBED6005C195C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D998DB4F199CBED6005C195C /* SystemConfiguration.framework */; };
 		D998DB52199CC02E005C195C /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = D998DB51199CC02E005C195C /* GTMOAuth2ViewTouch.xib */; };
 		D998DB55199CC058005C195C /* GTLCommon_Sources.m in Sources */ = {isa = PBXBuildFile; fileRef = D998DB53199CC058005C195C /* GTLCommon_Sources.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D998DB56199CC058005C195C /* GTLNetworking_Sources.m in Sources */ = {isa = PBXBuildFile; fileRef = D998DB54199CC058005C195C /* GTLNetworking_Sources.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D998DB5A199CC82F005C195C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D998DB59199CC82F005C195C /* SearchViewController.m */; };
 		D9A0D6001971412500ABBE96 /* icon-cast-connected.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A0D5FC1971412500ABBE96 /* icon-cast-connected.png */; };
 		D9A0D6011971412500ABBE96 /* icon-cast-connected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A0D5FD1971412500ABBE96 /* icon-cast-connected@2x.png */; };
 		D9A0D6021971412500ABBE96 /* icon-cast-identified.png in Resources */ = {isa = PBXBuildFile; fileRef = D9A0D5FE1971412500ABBE96 /* icon-cast-identified.png */; };
@@ -47,6 +47,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D85CB84C19AC81D400FCA696 /* YoutubeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YoutubeTableViewController.h; path = VideoSearch/YoutubeTableViewController.h; sourceTree = "<group>"; };
+		D85CB84D19AC81D400FCA696 /* YoutubeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YoutubeTableViewController.m; path = VideoSearch/YoutubeTableViewController.m; sourceTree = "<group>"; };
+		D85CB85019AC8A7C00FCA696 /* YoutubeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YoutubeCell.h; path = VideoSearch/YoutubeCell.h; sourceTree = "<group>"; };
+		D85CB85119AC8A7C00FCA696 /* YoutubeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YoutubeCell.m; path = VideoSearch/YoutubeCell.m; sourceTree = "<group>"; };
 		D95FAEF51963FFDF009BA0EB /* PartyAnimal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyAnimal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95FAEF81963FFDF009BA0EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D95FAEFA1963FFDF009BA0EB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -69,15 +73,11 @@
 		D96E861B1965396400680875 /* MainStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryBoard.storyboard; sourceTree = "<group>"; };
 		D97DBA7A199E02A800AED8B5 /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
 		D97DBA7B199E03DB00AED8B5 /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
-		D97DBA7D199E047A00AED8B5 /* VedioTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VedioTableViewController.h; sourceTree = "<group>"; };
-		D97DBA7E199E047A00AED8B5 /* VedioTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VedioTableViewController.m; sourceTree = "<group>"; };
 		D998DB4D199CBEC9005C195C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D998DB4F199CBED6005C195C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D998DB51199CC02E005C195C /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GTMOAuth2ViewTouch.xib; path = Source/OAuth2/Touch/GTMOAuth2ViewTouch.xib; sourceTree = "<group>"; };
 		D998DB53199CC058005C195C /* GTLCommon_Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLCommon_Sources.m; path = PartyAnimal/GTLCommon_Sources.m; sourceTree = "<group>"; };
 		D998DB54199CC058005C195C /* GTLNetworking_Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLNetworking_Sources.m; path = PartyAnimal/GTLNetworking_Sources.m; sourceTree = "<group>"; };
-		D998DB58199CC82F005C195C /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
-		D998DB59199CC82F005C195C /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		D9A0D5FC1971412500ABBE96 /* icon-cast-connected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-cast-connected.png"; sourceTree = "<group>"; };
 		D9A0D5FD1971412500ABBE96 /* icon-cast-connected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-cast-connected@2x.png"; sourceTree = "<group>"; };
 		D9A0D5FE1971412500ABBE96 /* icon-cast-identified.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-cast-identified.png"; sourceTree = "<group>"; };
@@ -111,6 +111,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D85CB84F19AC8A1F00FCA696 /* VideoSearch */ = {
+			isa = PBXGroup;
+			children = (
+				D85CB84C19AC81D400FCA696 /* YoutubeTableViewController.h */,
+				D85CB84D19AC81D400FCA696 /* YoutubeTableViewController.m */,
+				D85CB85019AC8A7C00FCA696 /* YoutubeCell.h */,
+				D85CB85119AC8A7C00FCA696 /* YoutubeCell.m */,
+			);
+			name = VideoSearch;
+			sourceTree = "<group>";
+		};
 		D95FAEEC1963FFDF009BA0EB = {
 			isa = PBXGroup;
 			children = (
@@ -151,16 +162,13 @@
 		D95FAEFE1963FFDF009BA0EB /* PartyAnimal */ = {
 			isa = PBXGroup;
 			children = (
+				D85CB84F19AC8A1F00FCA696 /* VideoSearch */,
 				D97DBA7A199E02A800AED8B5 /* Recipe.h */,
 				D97DBA7B199E03DB00AED8B5 /* Recipe.m */,
 				D95FAF071963FFDF009BA0EB /* AppDelegate.h */,
 				D95FAF081963FFDF009BA0EB /* AppDelegate.m */,
 				D95FAF2A196457F4009BA0EB /* ViewController.h */,
 				D95FAF2B196457F4009BA0EB /* ViewController.m */,
-				D998DB58199CC82F005C195C /* SearchViewController.h */,
-				D998DB59199CC82F005C195C /* SearchViewController.m */,
-				D97DBA7D199E047A00AED8B5 /* VedioTableViewController.h */,
-				D97DBA7E199E047A00AED8B5 /* VedioTableViewController.m */,
 				D95FAF0A1963FFDF009BA0EB /* Images.xcassets */,
 				D95FAEFF1963FFDF009BA0EB /* Supporting Files */,
 			);
@@ -307,10 +315,10 @@
 				D95FAF2C196457F4009BA0EB /* ViewController.m in Sources */,
 				D97DBA7C199E03DB00AED8B5 /* Recipe.m in Sources */,
 				D998DB55199CC058005C195C /* GTLCommon_Sources.m in Sources */,
-				D97DBA7F199E047A00AED8B5 /* VedioTableViewController.m in Sources */,
+				D85CB84E19AC81D400FCA696 /* YoutubeTableViewController.m in Sources */,
+				D85CB85219AC8A7C00FCA696 /* YoutubeCell.m in Sources */,
 				D95FAF091963FFDF009BA0EB /* AppDelegate.m in Sources */,
 				D95FAF051963FFDF009BA0EB /* main.m in Sources */,
-				D998DB5A199CC82F005C195C /* SearchViewController.m in Sources */,
 				D998DB56199CC058005C195C /* GTLNetworking_Sources.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,7 +449,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "/Users/msc0953/Documents/workspace/PartyAnimal/Source/**";
+				USER_HEADER_SEARCH_PATHS = "./Source/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -464,7 +472,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "/Users/msc0953/Documents/workspace/PartyAnimal/Source/**";
+				USER_HEADER_SEARCH_PATHS = "./Source/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

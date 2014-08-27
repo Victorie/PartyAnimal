@@ -1,27 +1,25 @@
 //
-//  VedioTableViewController.m
+//  YoutubeTableViewController.m
 //  PartyAnimal
 //
-//  Created by 李偉誠 on 8/15/14.
+//  Created by Joe on 8/26/14.
 //  Copyright (c) 2014 Victoire. All rights reserved.
 //
 
-#import "VedioTableViewController.h"
-#import "Recipe.h"
+#import "YoutubeTableViewController.h"
+#import "YoutubeCell.h"
 
-@interface VedioTableViewController ()
+@interface YoutubeTableViewController ()
 
 @end
 
-@implementation VedioTableViewController
-{
-    NSArray *recipes;
-    NSArray *searchResult;
-}
+@implementation YoutubeTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
+NSArray *dataSource;
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithStyle:style];
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
     }
@@ -32,14 +30,13 @@
 {
     [super viewDidLoad];
     
-    // Initialize the vedio array;
-    Recipe *recipe1 = [Recipe new];
-    recipe1.name = @"Egg Benedict";
-    recipe1.prepTime = @"30 mins";
-    recipe1.image = @"egg_benedict.jpg";
-    recipe1.ingredients = [NSArray arrayWithObjects:@"2 fresh English muffins", nil];
+    dataSource = [NSArray arrayWithObjects:@"amy",@"ben",@"cathy", nil];
     
-    recipes = [NSArray arrayWithObjects:recipe1, nil];
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,29 +49,30 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 0;
+    // Return the number of sections.
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (tableView == self.searchDisplayController.searchResultsTableView) {
-        return [searchResult count];
-    }
-    else {
-        return [recipes count];
-    }
+    // Return the number of rows in the section.
+    return [dataSource count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString *cellId = @"YoutubeCell";
+    YoutubeCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
+    if(cell == nil)
+        cell = [[YoutubeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     
     // Configure the cell...
+    cell.Title.text = dataSource[indexPath.row];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -118,7 +116,7 @@
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)prepareForSegue:(UIStoryboardSegstrongue *)segue sender:(id)sender
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
